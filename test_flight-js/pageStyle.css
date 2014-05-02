@@ -1,0 +1,777 @@
+@charset "utf-8";
+/* CSS Document */
+html,body {
+	float: left;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#wrapper {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	background-color: white;
+}
+
+
+#menu {
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 4%;
+	position: relative;
+	z-index: 5;
+	background-color: #ddd;
+	border-bottom: 9px solid white;
+}
+
+#menu ul {
+	float: left;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	padding-left: 2%;
+	width: 60%;
+	position: absolute;
+	bottom: -12%;
+	border-top-right-radius: 12px;
+}
+
+#menu ul li {
+	float: left;
+	z-index: 0;
+	position: relative;
+	display: inline;
+	cursor: pointer;
+	border-top-right-radius: 10px;
+	width: 25%;
+	text-align: center;
+}
+
+#menu ul li a {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 2em;
+	text-decoration: none;
+	color: #aaa;
+	text-transform: lowercase;
+}
+
+#context {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	left: 0;
+}
+
+#list {
+	font-family: Tahoma, Geneva, sans-serif;
+	height: 82%;
+	margin-top: 2%;
+	background-color: #444;
+}
+
+
+.mgroupi {
+	list-style-type: none;
+	text-align: right;
+	color: white;
+	width: 30%;
+	height: 20%;
+	font-size: 1.5em;
+	padding-right: 1%;
+	margin: 1px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.mgroupi:hover {
+	background-color: white;
+	color: darkgoldenrod;
+	cursor: pointer;
+}
+
+.mgroupi .sublist {
+	position: relative;
+	font-size: 0.8em;
+	color: white;
+	padding: 0;
+	border: none;
+	margin-left: 5%;
+	margin-top: 3%;
+	width: 100%;
+	height: 80%;
+	float: left;
+}
+
+.mgroupi .sublist ul {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.mgroupi .sublist>li {
+	margin: 2px;
+	background-color: #eee;
+	border: solid 2px #eee;
+	padding: 1%;
+	color: #aaa;
+	font-size: 0.8em;
+	width: 40%;
+	height: 40%;
+	float: left;
+}
+
+.mgroupi > ul > li:hover {
+	color: white;
+	background-color: tan;
+}
+
+div#post_list {
+    /* background-color: #aaa; */
+    float: left;
+    width: 98%;
+    height: 20%;
+    font-family: verdana;
+    font-size: 1em;
+    margin-left: 1%;
+}
+
+div#context ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 116%;
+}
+
+div#context ul.post>li {
+    float: left;
+    width: 49%;
+    height: 18%;
+    background-color: tomato;
+    margin: 1px;
+    padding: 2px;
+    color: white;
+}
+div#context ul.post>li.selected {
+	background-color: #D33F3F;
+	
+}
+div#context ul.post>li>div:first-child {
+	float:left;	
+	width: 70%;
+	white-space: nowrap;
+}
+div#context ul.post>li>div:first-child:hover {
+	/* white-space:normal; */
+	/* overflow: auto; */
+}
+div#context ul.post>li>div>h2 {
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    padding: 1%;
+    width: 100%;
+    text-overflow: ellipsis;
+    /* background-color: white; */
+    overflow: hidden;
+}
+div#context ul.post>li>div>h2:hover {
+	overflow:auto;
+	text-overflow: initial;
+}
+div#context ul.post>li>div:last-child	 {
+    float: right;
+    height: 100%;
+    width: 25%;
+    background-color: white;
+    color: salmon;
+}
+div#context ul.post>li>div>span {
+    float: right;
+    width: 40%;
+	
+    /* font-weight:bold; */
+	text-align:right;
+	height:100%;
+}
+
+div#context ul.post>li:hover {
+	cursor:pointer;
+	background-color:white;
+	color:sienna;
+}
+div.fullComment{
+    background-color: #eee;
+    position: absolute;
+    bottom: 20%;
+    left: -100%;
+    width: 98%;
+    height: 52%;
+    overflow: hidden;
+}
+div.fullComment>p{
+	float:left;
+	width: 70%;
+	height: 70%;
+	padding: 1%;
+	font-size: 1.5em;
+	margin: 0;
+	font-family: calibri;
+	overflow: auto;
+	background-color: slategrey;
+	margin: 4% 0 0 14%;
+	border-radius: 30px;
+	margin-top: 30%;
+	opacity: 0;
+	color: white;
+	font-style: italic;
+	border: 7px dotted #ddd;
+}
+ul.comment {}
+div#comment_list {
+    width: 98%;
+    height: 15%;
+    border-bottom: 4px solid burlywood;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+    background-color: #555;
+}
+ul.comment ul.comment>li {
+    border-bottom: solid 2px #aaa;
+}
+ul.comment>li.selected{
+    color: tomato;
+	
+    border-color: tomato;
+    font-weight: bold;
+}
+ul.comment>li>*:not(div) {
+	/* display:none */}
+ul.comment>li {
+    border: solid #777;
+    margin: 1px;
+    width: 12%;
+    height: 82%;
+    color: grey;
+    font-family: calibri;
+    /* opacity: 0; */
+    /* margin-top: 10%; */
+    background-color: white;
+    position: relative;
+    background-color: whitesmoke;
+}
+ul.comment>li:hover{
+	cursor:pointer;
+	border: solid #ddd;
+	background-color: white;
+	color: tomato;
+}
+ul.comment>li>b {
+    word-wrap: break-word;
+	
+    position: absolute;
+    top: 2%;
+    width: 80%;
+    left: 10%;
+    font-size: 0.7em;
+}
+ul.comment>li>p {
+    color: steelblue;
+    margin: 0;
+    background-color: #eee;
+    position: absolute;
+    width: 90%;
+    height: 38%;
+    overflow: hidden;
+    display: none;
+}
+ul.comment>li>p:after {
+	content:'...';
+}
+ul.comment>li>div {
+	position: absolute;
+	bottom: 0%;
+	left: 10%;
+	text-transform: capitalize;
+	height: 30%;
+	width: 100%;
+	float: left;
+	font-style: italic;
+	font-size: 0.8em;
+	z-index: 10;
+}
+ul.comment>li>div>span {
+	width:100%;
+}
+ul.comment>li>div>span.cusr {
+	position: absolute;
+	bottom: -25%;
+	left: 1%;
+	font-size: 2em;
+	font-style: normal;
+	/* background-color: white; */
+	padding: 2%;
+}
+
+span.pul, span.ppa, span.ppb {
+    display: none;
+}
+
+div#post_list > ul {
+    height: 100%;
+}
+
+div#context ul.comment {
+    width: 100%;
+    /* height: 109%; */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+ul.comment>li>div.hoverComment {
+    position: fixed;
+    width: 12%;
+    height: 1%;
+    background: url("comment_holder.png");
+    background-size: 100% 100%;
+    color: white;
+    border-top: solid 2px;
+    font-size: 1em;
+    padding: 1%;
+    border-radius: 21px;
+}
+ul.comment>li>div.hoverComment>p {
+	float:left;
+	width: 94%;
+	height: 56%;
+	white-space:normal;
+	overflow:hidden;	
+	padding: 4px;
+	opacity: 0;
+}
+ul.comment>li>div.hoverComment>p:after {
+	content:'...';
+}
+span.pcc:after {
+    content: url("comments.png");
+}
+span.ppt:after {
+    content: url("add.png");
+}
+
+
+/*----------------------------------------*/
+@charset "utf-8";
+/* CSS Document */
+html,body {
+	float: left;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#wrapper {
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	background-color: white;
+}
+
+
+#menu {
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 4%;
+	position: relative;
+	z-index: 5;
+	background-color: #ddd;
+	border-bottom: 9px solid white;
+}
+
+#menu ul {
+	float: left;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	padding-left: 2%;
+	width: 60%;
+	position: absolute;
+	bottom: -12%;
+	border-top-right-radius: 12px;
+}
+
+#menu ul li {
+	float: left;
+	z-index: 0;
+	position: relative;
+	display: inline;
+	cursor: pointer;
+	border-top-right-radius: 10px;
+	width: 25%;
+	text-align: center;
+}
+
+#menu ul li a {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 2em;
+	text-decoration: none;
+	color: #aaa;
+	text-transform: lowercase;
+}
+
+#context {
+	margin: 0;
+	height: 102%;
+	width: 100%;
+	position: relative;
+	left: 0;
+}
+
+#list {
+	font-family: Tahoma, Geneva, sans-serif;
+	height: 82%;
+	margin-top: 2%;
+	background-color: #444;
+}
+
+
+.mgroupi {
+	list-style-type: none;
+	text-align: right;
+	color: white;
+	width: 30%;
+	height: 20%;
+	font-size: 1.5em;
+	padding-right: 1%;
+	margin: 1px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.mgroupi:hover {
+	background-color: white;
+	color: darkgoldenrod;
+	cursor: pointer;
+}
+
+.mgroupi .sublist {
+	position: relative;
+	font-size: 0.8em;
+	color: white;
+	padding: 0;
+	border: none;
+	margin-left: 5%;
+	margin-top: 3%;
+	width: 100%;
+	height: 80%;
+	float: left;
+}
+
+.mgroupi .sublist ul {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.mgroupi .sublist>li {
+	margin: 2px;
+	background-color: #eee;
+	border: solid 2px #eee;
+	padding: 1%;
+	color: #aaa;
+	font-size: 0.8em;
+	width: 40%;
+	height: 40%;
+	float: left;
+}
+
+.mgroupi > ul > li:hover {
+	color: white;
+	background-color: tan;
+}
+
+div#post_list {
+    /* background-color: #aaa; */
+    float: left;
+    width: 98%;
+    height: 20%;
+    font-family: verdana;
+    font-size: 1em;
+    margin-left: 1%;
+}
+
+div#context ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 116%;
+}
+
+div#context ul.post>li {
+    float: left;
+    width: 49%;
+    height: 18%;
+    background-color: slategrey;
+    margin: 1px;
+    padding: 2px;
+    color: white;
+}
+div#context ul.post>li.selected {
+	background-color: #D33F3F;
+	
+}
+div#context ul.post>li>div:first-child {
+	float:left;	
+	width: 70%;
+	white-space: nowrap;
+}
+
+div#context ul.post>li>div>h2 {
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    padding: 1%;
+    width: 100%;
+    text-overflow: ellipsis;
+    /* background-color: white; */
+    overflow: hidden;
+}
+div#context ul.post>li>div:last-child	 {
+    float: right;
+    height: 100%;
+    width: 25%;
+    background-color: white;
+    color: salmon;
+}
+div#context ul.post>li>div>span {
+    float: right;
+    width: 40%;
+	
+    /* font-weight:bold; */
+	text-align:right;
+	height:100%;
+}
+
+div#context ul.post>li:hover {
+	cursor:pointer;
+	background-color:white;
+	color:sienna;
+}
+div.fullComment{
+    background-color: #eee;
+    position: absolute;
+    bottom: 20%;
+    left: -100%;
+    width: 98%;
+    height: 52%;
+    overflow: hidden;
+}
+div.fullComment>p{
+	float:left;
+	width: 70%;
+	height: 70%;
+	padding: 1%;
+	font-size: 1.5em;
+	margin: 0;
+	font-family: calibri;
+	overflow: auto;
+	background-color: white;
+	margin: 4% 0 0 14%;
+	border-radius: 30px;
+	margin-top: 30%;
+	opacity: 0;
+	color: brown;
+	font-style: italic;
+	border: 7px dotted #ddd;
+}
+ul.comment {}
+div#comment_list {
+    width: 86%;
+    height: 15%;
+    border-bottom: 4px solid burlywood;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    position: absolute;
+    bottom: 4%;
+    left: 7%;
+    background-color: #888;
+    z-index: 10;
+}
+ul.comment ul.comment>li {
+    border-bottom: solid 2px #aaa;
+}
+ul.comment>li.selected{
+    color: tomato;
+	
+    border-color: tomato;
+    font-weight: bold;
+}
+ul.comment>li>*:not(div) {
+	/* display:none */}
+ul.comment>li {
+    border: solid #777;
+    margin: 1px;
+    width: 12%;
+    height: 82%;
+    color: grey;
+    font-family: calibri;
+    /* opacity: 0; */
+    /* margin-top: 10%; */
+    background-color: white;
+    position: relative;
+    background-color: whitesmoke;
+}
+ul.comment>li:hover{
+	cursor:pointer;
+	border: solid #ddd;
+	background-color: white;
+	color: tomato;
+}
+ul.comment>li>b {
+    word-wrap: break-word;
+	
+    position: absolute;
+    top: 2%;
+    width: 80%;
+    left: 10%;
+    font-size: 0.7em;
+}
+ul.comment>li>p {
+    color: steelblue;
+    margin: 0;
+    background-color: #eee;
+    position: absolute;
+    width: 90%;
+    height: 38%;
+    overflow: hidden;
+    display: none;
+}
+ul.comment>li>p:after {
+	content:'...';
+}
+ul.comment>li>div {
+	position: absolute;
+	bottom: 0%;
+	left: 10%;
+	text-transform: capitalize;
+	height: 30%;
+	width: 100%;
+	float: left;
+	font-style: italic;
+	font-size: 0.8em;
+	z-index: 10;
+}
+ul.comment>li>div>span {
+	width:100%;
+}
+ul.comment>li>div>span.cusr {
+	position: absolute;
+	bottom: -25%;
+	left: 1%;
+	font-size: 2em;
+	font-style: normal;
+	/* background-color: white; */
+	padding: 2%;
+}
+
+span.pul, span.ppa, span.ppb {
+    display: none;
+}
+
+div#post_list > ul {
+    height: 100%;
+}
+
+div#context ul.comment {
+    width: 100%;
+    /* height: 109%; */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    position: relative;
+    left: 0%;
+}
+ul.comment>li>div.hoverComment {
+    position: fixed;
+    width: 12%;
+    height: 1%;
+    background: url("comment_holder.png");
+    background-size: 100% 100%;
+    color: white;
+    border-top: solid 2px;
+    font-size: 1em;
+    padding: 1%;
+    border-radius: 21px;
+}
+ul.comment>li>div.hoverComment>p {
+	float:left;
+	width: 94%;
+	height: 58%;
+	white-space:normal;
+	overflow:hidden;	
+	padding: 4px;
+	opacity: 0;
+}
+ul.comment>li>div.hoverComment>p:after {
+	content:'...';
+}
+span.pcc:after {
+    content: url("comments.png");
+}
+span.ppt:after {
+    content: url("add.png");
+}
+div#scroll_buttons {
+    position: absolute;
+    width: 80%;
+    bottom: 0%;
+    left: 10%;
+    height: 17%;
+    opacity: 0;
+}
+div#scroll_buttons>span {
+    color: lightslategray;
+    height: 70%;
+    width: 4%;
+    font-size: 7em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #eee;
+    font-family: calibri;
+    border-radius: 16px;
+    margin: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
+    border: solid #ddd;
+}
+div#scroll_buttons>span:hover {
+    color: tomato;
+}
+div#scroll_buttons>span:first-child {
+    float: left;
+}
+div#scroll_buttons>span:last-child {
+    float: right;
+    text-align: right;
+}
